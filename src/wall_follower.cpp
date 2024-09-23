@@ -63,11 +63,6 @@ int main(int argc, const char *argv[])
         float final_x_along = vector_along_wall[0] - correction_vector[0];
         float final_y_along = vector_along_wall[1] - correction_vector[1];
 
-        std::cout << "x: " << final_x_along << std::endl;
-        std::cout << "y: " << final_y_along << std::endl;
-        std::cout << "dist to wall: " << dist_to_wall << std::endl;
-        std::cout << "angle to wall: " << angle_to_wall << std::endl;
-
         robot.drive(std::ceil((final_x_along * 100.0)) / 100.0, std::ceil((final_y_along * 100.0)) / 100.0, 0);
 
         if (ctrl_c_pressed)
